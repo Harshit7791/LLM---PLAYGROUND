@@ -1,178 +1,246 @@
-# NEXUS AI LAB — Enterprise AI Developer Console & Multi-Model Playground
+<div align="center">
 
-> **"One Workspace. Endless Intelligence."**
+# ⚡ NEXUS AI LAB
+### *One Workspace. Endless Intelligence.*
 
-**NEXUS AI LAB** is a unified, production-grade AI developer console and multi-model experimentation workbench. Built entirely with a zero-dependency, self-contained single-file architecture (`index.html`), it consolidates ultra-fast LPU inference, cloud foundation gateways, private on-premise local models, prompt engineering blueprints, side-by-side benchmarking, and agent tooling into a single futuristic workspace.
+**Enterprise AI Developer Console, Multi-Model Experimentation Workbench & Prompt Engineering Studio**
+
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-34D399?style=for-the-badge&logo=statuspage&logoColor=white)](https://github.com)
+[![Architecture](https://img.shields.io/badge/Architecture-Single--File%20(index.html)-22D3EE?style=for-the-badge&logo=html5&logoColor=white)](https://github.com)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Vanilla%20ES6)-818CF8?style=for-the-badge&logo=javascript&logoColor=white)](https://github.com)
+[![Inference](https://img.shields.io/badge/Inference-Ultra--Fast%20LPU%20%7C%20BYOK-FBBF24?style=for-the-badge&logo=speedtest&logoColor=black)](https://github.com)
+[![Security](https://img.shields.io/badge/Security-Zero--Trace%20Client%20Sandbox-34D399?style=for-the-badge&logo=shield&logoColor=white)](https://github.com)
+[![License](https://img.shields.io/badge/License-MIT-gray?style=for-the-badge)](LICENSE)
+
+<br/>
+
+[🚀 Quick Start](#-quick-start) • [🎛️ Core Capabilities](#️-core-capabilities) • [🌐 Model Fleet](#-unified-model-fleet) • [📋 Prompt Blueprints](#-curated-prompt-library) • [⧉ Model Comparison](#-side-by-side-benchmarking) • [🔒 Zero-Trace Security](#-zero-trace-security-architecture)
 
 ---
 
-## 🎨 Theme & Visual Identity
+</div>
 
-The design system implements a futuristic midnight-blue & electric-cyan developer aesthetic:
+## 📖 Overview
 
-| Design Token | Hex Code | Purpose |
+**NEXUS AI LAB** is a lightweight, high-performance developer console engineered for exploring, testing, and benchmarking production language models. Built entirely as a self-contained single-file web application (`index.html`), it pairs a futuristic midnight-navy developer interface with a dual-mode execution engine:
+
+- **⚡ Live Streaming Mode**: Direct client-side SSE streaming to Groq LPUs, OpenAI, Google Gemini, Anthropic, OpenRouter, and local Ollama/vLLM servers.
+- **🧪 Interactive Simulation Mode**: Deterministic, zero-credential simulation engine allowing instant offline UI evaluation without external API keys.
+
+---
+
+## 🎨 Design System & Visual Palette
+
+The console is crafted around an intentional, low-fatigue dark aesthetic tailored for continuous development sessions:
+
+| Design Token | Hex Code | Visual Application |
 |---|---|---|
-| **Canvas Background** | `#080D1B` | Deep midnight space |
-| **Sidebar Background** | `#0D1629` | Structural navigation drawer |
-| **Workspace Panels** | `#131F35` | Primary interaction containers |
-| **Elevated Containers** | `#192740` | Headers, wells, and inputs |
-| **Subtle Borders** | `#293B57` | Structural dividing lines |
-| **Primary Accent** | `#22D3EE` | Electric cyan buttons, active states |
-| **Secondary Accent** | `#6366F1` | Indigo badges, user turn indicators |
-| **Violet Accent** | `#A78BFA` | Creative tags & tool highlights |
-| **Success Indicator** | `#34D399` | Throughput tags, connected status |
-| **Warning / Demo** | `#FBBF24` | Demo mode indicator, key optional |
+| **Canvas Background** | `#080D1B` | Deep midnight canvas with subtle cosmic undertones |
+| **Sidebar Drawer** | `#0D1629` | Structural navigation pane and persistent history |
+| **Primary Panels** | `#131F35` | Workbench cards, parameter wells, and output viewports |
+| **Elevated Containers** | `#192740` | Active headers, interactive buttons, and code blocks |
+| **Structural Borders** | `#293B57` | High-contrast component framing |
+| **Primary Accent** | `#22D3EE` | Electric cyan buttons, active nav tabs, slider thumbs |
+| **Secondary Accent** | `#6366F1` | Indigo turn indicators and category badges |
+| **Creative Accent** | `#A78BFA` | Violet tags and specialized tool calls |
+| **Success Indicator** | `#34D399` | Ultra-fast throughput pills and active gateway status |
+| **Warning / Demo** | `#FBBF24` | Key-optional indicator and simulated mode badges |
 
 ---
 
-## 🏛️ Application Architecture & Core Feature Matrix
+## 🎛️ Core Capabilities
 
-### 1. 🖥️ Master Playground (Image 1 Foundation)
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                 NEXUS AI LAB                                    │
+├──────────────┬───────────────────────────────────────────────────┬──────────────┤
+│  WORKBENCH   │  STUDIO: [Chat] [Vision] [Agents] [Safety] [Batch]│  PARAMETERS  │
+│  ──────────  │  ───────────────────────────────────────────────  │  ──────────  │
+│  Playground  │  ⚡ Workspace Presets                             │  • Stream    │
+│  Library     │  ⚙️ System Instructions (Cached Prefix)           │  • JSON Mode │
+│  Explorer    │  💬 Multi-Turn User Prompt Composer               │  • Temp/TopP │
+│  Compare     │  🤖 Streaming Assistant Output (TTFT, tok/s)      │  • Tools/MCP │
+│  Docs / Set  │  📋 Copy • 🔊 Speech Synthesis • <> Code Export   │  • Penalties │
+└──────────────┴───────────────────────────────────────────────────┴──────────────┘
+```
 
-The primary workbench implements every capability from the master playground reference:
+### 1. 🖥️ Studio Workstations
+- **💬 Chat & Reasoning**: Multi-turn dialogue with real-time token streaming, Markdown formatting, syntax-highlighted code with copy buttons, and Web Speech voice playback.
+- **👁️ Vision & Audio**: Multimodal evaluation for Meta Llama 3.2 11B Vision and Whisper Large v3 Turbo transcription benchmarked at **~216x realtime**.
+- **🤖 Agents & MCP Tools**: Integrated Model Context Protocol (MCP) server bindings and OpenAPI function registry with schema validation.
+- **🛡️ Safety & Guardrails**: Live policy auditor testing prompts against MLCommons AI Safety standards via Meta Llama Guard 3 8B and Prompt Guard 2 86M.
+- **📦 Batch & Service Tiers**: Interactive token budget calculator projecting 50% discounts for asynchronous batch queues vs. real-time Groq TSPs.
 
-#### A. Top Navigation & Studio Sub-Tabs
-- **Chat & Reasoning**: Default high-throughput streaming workbench with multi-model support.
-- **Vision & Audio**: Multimodal perception inspector for Meta Llama 3.2 11B Vision and Whisper Large v3 Turbo audio transcription benchmarks (`~216x realtime`).
-- **Agents & MCP Tools**: OpenAPI function registry and Model Context Protocol (MCP) server bindings with parameter schema validation.
-- **Safety & Guardrails**: Content moderation scanner powered by Meta Llama Guard 3 8B and Prompt Guard 2 86M for prompt injection detection.
-- **Batch & Service Tiers**: Token budget calculator with 50% discount asynchronous batch estimations and TSP vs GPU latency comparisons.
-- **Header Actions**:
-  - `<> View Code`: Generates live code snippets in **cURL**, **Python SDK**, **JavaScript (`fetch` streaming)**, and **Node.js**.
-  - **Set API Key**: Connects provider credentials stored exclusively in browser local memory.
-  - **+ New Session**: Resets active conversation turns and output buffers.
-  - **💾 Save**: Persists active session snapshots into the sidebar.
-
-#### B. Workspace Presets
-One-click pre-configured prompts that adjust models, temperatures, and instructions:
-- **Multi-Step Logic Proof**: `openai/gpt-oss-120b` reasoning chain with formal theorem verification.
-- **TypeScript Performance Audit**: `qwen/qwen-2.5-coder-32b` async pipeline profiling with zero-allocation buffers.
+### 2. ⚡ Workspace Presets
+Load end-to-end configured environments with a single click:
+- **Multi-Step Logic Proof**: `openai/gpt-oss-120b` reasoning chain with formal mathematical verification.
+- **TypeScript Performance Audit**: `qwen/qwen-2.5-coder-32b` profiling zero-allocation streaming pipelines.
 - **Strict JSON Schema Output**: `meta-llama/llama-3.3-70b-versatile` RFC 8259 structured entity extraction.
-- **Ultra-Fast Chat Agent**: `llama-3.1-8b-instant` microservice (~1,250 tok/s).
+- **Ultra-Fast Chat Agent**: `llama-3.1-8b-instant` microservice operating at **~1,250 tok/s**.
 
-#### C. Comprehensive Model Fleet
-- **Groq LPU**: `llama-3.1-8b-instant` (~1,250 tok/s), `meta-llama/llama-3.3-70b-versatile` (~280 tok/s), `openai/gpt-oss-120b` (~320 tok/s), `qwen/qwen-2.5-coder-32b` (~350 tok/s), `mistralai/mixtral-8x7b-32768` (~480 tok/s).
-- **OpenAI Cloud**: `gpt-4o`, `gpt-4o-mini`, `o3-mini`.
-- **Google Gemini**: `gemini-2.0-flash` (1M context), `gemini-1.5-pro` (2M context).
-- **Anthropic**: `claude-3-7-sonnet`, `claude-3-5-haiku`.
-- **OpenRouter**: Open-weights router gateway.
-- **Local Server (Ollama / vLLM)**: Private air-gapped inference on `localhost:11434`.
-
-#### D. System Prompt Editor
-- Labeled `SYSTEM` with `Cached Prefix` indicator.
-- Persona presets (*Software Architect*, *Executive Summarizer*, *Strict JSON Generator*).
-- `Clear` and `Reset` buttons.
-
-#### E. API Connection Banner
-- Clearly displays `DEMO MODE` or `LIVE CONNECTED`.
-- Switch toggle between **Live Mode** and **Demo Mode**.
-- Link to connect BYOK credentials with zero server-side storage.
-
-#### F. Assistant Output Panel
-- Streaming responses with real-time markdown formatting and syntax-highlighted code blocks.
-- **Real-time Telemetry**: Latency (TTFT ms), Token count, and Throughput speed (`tok/s`).
-- One-click `📋 Copy Markdown` and `🔊 Speak` (Web Speech API).
-- Error recovery with retry guidance.
-
-#### G. User Prompt Composer
-- Large multiline input supporting `Ctrl+Enter` / `Cmd+Enter` execution.
-- Multi-turn conversation container (`+ User Turn`, `+ Assistant Turn`).
-- Attachment control (`📎 Attachment`).
-- Real-time character and token estimation counter.
-
-#### H. Complete Parameters Panel
-1. **Stream Toggle**: Enable or disable real-time token streaming.
-2. **JSON Mode Toggle**: Enforces valid RFC 8259 structured JSON output.
-3. **Temperature Slider**: Range 0.00 to 2.00 with live numerical display.
-4. **Max Output Tokens**: Range 1 to 8192 with numeric input validation.
-5. **Top P (Nucleus)**: Range 0.00 to 1.00.
-6. **Stop Sequences**: Comma-separated stop tokens.
-7. **Built-in Tools**: Toggleable *Browser Search* (Exa-powered) and *Code Interpreter* (Python sandbox).
-8. **Custom Function Tools**: `+ Add Function` modal with JSON Schema parameter editor.
-9. **MCP Servers**: `+ Add Server` modal for Model Context Protocol connections.
-10. **Advanced Parameters**: Frequency Penalty, Presence Penalty, Deterministic Seed.
+### 3. 🎚️ Comprehensive Parameter Studio
+- **Stream Toggle**: Switch between real-time chunk streaming and single-payload completion.
+- **JSON Mode**: Enforce RFC 8259 compliance at the inference runtime.
+- **Temperature & Top P**: Granular sliders (0.00 to 2.00 / 0.00 to 1.00) with live telemetry.
+- **Max Output Tokens & Stop Sequences**: Configure hard token caps and custom delimiters (`###`, `END`).
+- **Built-in Tools**: Toggleable Exa-powered *Browser Search* and *Python 3 Code Interpreter*.
+- **Custom Functions**: Register OpenAPI tools with custom JSON Schema parameter definitions.
+- **MCP Servers**: Add stdio or SSE server connection endpoints.
 
 ---
 
-### 2. 📋 Prompt Library (Image 3 + Custom Creation)
-- **Search & Filter**: Keyword search with category chips (`All`, `Development`, `Productivity`, `Creative`, `Education`, `Business`).
-- **6 Production Blueprints**:
-  1. *Coding Assistant* (TypeScript / Python)
-  2. *Executive Summarizer* (PRDs & meeting briefs)
-  3. *Narrative & Creative Fiction* (Cinematic scene construction)
-  4. *Technical Explainer* (Feynman pedagogy)
-  5. *Venture Strategy Review* (Moat & unit economic modeling)
-  6. *Code Security Auditor* (OWASP Top 10 remediation)
-- **Custom Prompts**: `+ Create Custom Prompt` modal allows saving, editing, and deleting custom prompt blueprints stored in `localStorage`.
-- **One-Click Loading**: Clicking any card loads system instructions and user prompt directly into the active playground.
+## 🌐 Unified Model Fleet
+
+| Model Specification | Provider / Gateway | Context | Optimal Workload | Throughput Profile |
+|---|---|---|---|---|
+| **Llama 3.1 8B Instant** | Groq LPU | `128,000 tok` | Ultra-low latency microservices, instant agents | `⚡ ~1,250 tok/s` |
+| **Llama 3.3 70B Versatile** | Groq LPU / OpenRouter | `128,000 tok` | Multihop logic, synthetic datasets, complex code | `⚡ ~280 tok/s` |
+| **OpenAI GPT-OSS 120B** | Groq / Meta Compute | `128,000 tok` | Deep reasoning chains, theorem proofs, audits | `⚡ ~320 tok/s` |
+| **Qwen 2.5 Coder 32B** | Groq LPU | `128,000 tok` | Full-stack refactoring, tests, vulnerabilities | `⚡ ~350 tok/s` |
+| **Mixtral 8x7B Sparse MoE** | Groq / Mistral | `32,768 tok` | High-concurrency docs, multilingual pipelines | `⚡ ~480 tok/s` |
+| **GPT-4o & GPT-4o Mini** | OpenAI Cloud | `128,000 tok` | Multimodal vision, complex tool orchestration | `~110 tok/s` |
+| **Claude 3.7 Sonnet / Haiku** | Anthropic | `200,000 tok` | Nuanced prose, high-level software architecture | `~95 tok/s` |
+| **Google Gemini 2.0 Flash** | Google AI Studio | `1,000,000 tok` | Massive repository context, video/audio reasoning | `⚡ ~240 tok/s` |
+| **Local Models (Ollama / vLLM)** | Localhost (`:11434`) | `Dynamic` | Air-gapped private inference, sensitive records | `Local Hardware` |
 
 ---
 
-### 3. 🌐 Model Explorer (Image 4)
-- Specification table detailing Model Spec, Primary Gateway, Context Window, Optimal Workload, Throughput Profile, and direct `[ Use in Playground ]` actions.
+## 📋 Curated Prompt Library
+
+Filter blueprints by category or author custom prompts stored directly in `localStorage`:
+
+- 💻 **Coding Assistant** (`Development`): Generates strictly-typed production code with Big-O complexity analysis.
+- 📊 **Executive Summarizer** (`Productivity`): Distills meetings and PRDs into 3 core takeaways and prioritized action items.
+- 🎭 **Narrative & Creative Fiction** (`Creative`): Cinematic scene building with atmospheric voice control.
+- 🔬 **Technical Explainer** (`Education`): Explains algorithms via Feynman grounding metaphors.
+- 📈 **Venture Strategy Review** (`Business`): Moat defensibility and unit economic evaluation.
+- 🛡️ **Code Security Auditor** (`Development`): OWASP Top 10 detection with remediated drop-in patches.
 
 ---
 
-### 4. ⧉ Side-by-Side Model Comparison (Image 5)
-- Simultaneous dual execution of **Candidate Model A** and **Candidate Model B** on a shared evaluation prompt.
-- Independent streaming buffers, latency meters, and token counters.
+## ⧉ Side-by-Side Benchmarking
+
+Test candidate models simultaneously on identical prompts:
+- **Parallel Dispatch**: Executes independent asynchronous requests across distinct provider gateways.
+- **Real-Time Divergence Analysis**: Inspect reasoning differences, stylistic nuances, and token efficiency side-by-side.
+- **Latency Telemetry**: Independent millisecond response latency and token count metrics.
 
 ---
 
-### 5. 📖 Documentation & Production Architecture (Image 6)
-- **System Handbook**:
-  1. *Multi-Gateway Protocol*
-  2. *Dual-Mode Execution (Live vs. Demo)*
-  3. *Sampling Temperature vs. Nucleus Sampling*
-  4. *Multi-Turn Threading*
-  5. *Resilience & Exponential Backoff*
-  6. *Zero-Trace Security Guarantee*
+## 💻 Implementation Code Export
 
----
+Instantly export your active configuration to production code:
 
-### 6. ⚙️ Settings & Credentials (Image 6)
-- BYOK API key storage for Groq, OpenAI, Google Gemini, Anthropic, and custom local Ollama/vLLM endpoints.
-- Client runtime telemetry displaying storage footprint and session persistence status.
+<details>
+<summary><b>View Export Examples (cURL, Python, JavaScript, Node.js)</b></summary>
+
+### cURL
+```bash
+curl https://api.groq.com/openai/v1/chat/completions \
+  -H "Authorization: Bearer $GROQ_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "llama-3.1-8b-instant",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Explain quantum superposition."}
+    ],
+    "temperature": 0.7,
+    "stream": true
+  }'
+```
+
+### Python SDK
+```python
+from groq import Groq
+
+client = Groq()
+completion = client.chat.completions.create(
+    model="llama-3.1-8b-instant",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Explain quantum superposition."}
+    ],
+    temperature=0.7,
+    stream=True
+)
+
+for chunk in completion:
+    print(chunk.choices[0].delta.content or "", end="")
+```
+
+### JavaScript (`fetch` streaming)
+```javascript
+const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${process.env.GROQ_API_KEY}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    model: "llama-3.1-8b-instant",
+    messages: [
+      { role: "system", content: "You are a helpful assistant." },
+      { role: "user", content: "Explain quantum superposition." }
+    ],
+    temperature: 0.7,
+    stream: true
+  })
+});
+
+const reader = response.body.getReader();
+const decoder = new TextDecoder();
+while (true) {
+  const { done, value } = await reader.read();
+  if (done) break;
+  console.log(decoder.decode(value));
+}
+```
+
+</details>
 
 ---
 
 ## 🚀 Quick Start
 
-### Option A: Open Directly in Browser
+### Method 1: Direct File Launch
+Double-click `index.html` or run:
 ```bash
 open index.html
 ```
 
-### Option B: Local HTTP Server
+### Method 2: Local HTTP Server (Recommended)
 ```bash
+# Python 3
 python3 -m http.server 8000
-# Visit: http://localhost:8000
+
+# Node.js (npx)
+npx serve -l 8000 .
 ```
+Navigate to **`http://localhost:8000`** in any modern web browser.
 
 ---
 
-## ✅ Acceptance Test Checklist
+## 🔒 Zero-Trace Security Architecture
 
-| Feature Item | Reference | Status |
-|---|---|---|
-| **Top Studio Tabs** (Chat, Vision, Agents, Safety, Batch) | Image 1 | ✅ Tested & Working |
-| **Workspace Presets** (Logic, TS, JSON, Fast) | Image 1 | ✅ Tested & Working |
-| **Model Fleet** (Groq, OpenAI, Gemini, Anthropic, Ollama) | Image 1 | ✅ Tested & Working |
-| **System Prompt Editor** (Cached prefix, Persona presets, Clear/Reset) | Image 1 | ✅ Tested & Working |
-| **API Connection Banner** (Live / Demo mode toggle, BYOK info) | Image 1 | ✅ Tested & Working |
-| **Assistant Output** (Streaming, markdown, code copy, speech, latency/speed) | Image 1 | ✅ Tested & Working |
-| **User Prompt Composer** (Multiline, Ctrl+Enter, multi-turn, attachments) | Image 1 | ✅ Tested & Working |
-| **Complete Parameters** (Stream, JSON, Temp, MaxTokens, TopP, Tools, MCP) | Image 1 | ✅ Tested & Working |
-| **Prompt Library** (6 Curated cards + Custom prompt creation/filtering) | Image 3 | ✅ Tested & Working |
-| **Model Explorer** (Table, gateways, throughputs, Use in Playground) | Image 4 | ✅ Tested & Working |
-| **Side-by-Side Comparison** (Parallel execution of Model A vs B) | Image 5 | ✅ Tested & Working |
-| **Documentation Handbook** (6 architectural cards) | Image 6 | ✅ Tested & Working |
-| **Settings & Credentials** (Zero-trace BYOK management & telemetry) | Image 6 | ✅ Tested & Working |
-| **NEXUS AI LAB Branding** (Midnight-blue `#080D1B`, cyan `#22D3EE`, logo) | All Images | ✅ Tested & Working |
+> [!IMPORTANT]
+> **NEXUS AI LAB does not operate any intermediate proxy servers, tracking databases, or telemetry trackers.**
+
+1. **Client-Side Sandbox**: All API credentials (Groq, OpenAI, Gemini, Anthropic) and saved session histories are stored exclusively in the browser's `localStorage`.
+2. **Direct Browser-to-Provider HTTPS**: Streaming requests are dispatched directly from your browser to authenticated provider endpoints (`api.groq.com`, `api.openai.com`, `generativelanguage.googleapis.com`, or local `localhost:11434`).
+3. **One-Click Purge**: Use the **Purge All Credentials** button in Settings to instantly wipe all tokens, keys, and cached prompts from your browser storage.
 
 ---
 
-## 🔒 Security & Privacy Guarantee
+## ⌨️ Keyboard Shortcuts
 
-- **Zero Server-Side Storage**: All API keys, prompt histories, and session records remain strictly on the client inside browser `localStorage`.
-- **Direct Encrypted HTTPS**: Live inference requests communicate directly with provider APIs (`api.groq.com`, `api.openai.com`, `generativelanguage.googleapis.com`) with zero intermediary telemetry or reverse proxies.
+| Shortcut | Description |
+|---|---|
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> / <kbd>Cmd</kbd> + <kbd>Enter</kbd> | Execute prompt / trigger streaming generation |
+| <kbd>Esc</kbd> | Dismiss open modal dialogs |
+| <kbd>Cmd</kbd> + <kbd>?</kbd> | Open System Documentation Handbook |
+
+---
+
+## 📄 License
+Open-source under the [MIT License](LICENSE). Built for AI researchers, prompt engineers, and production systems builders.
