@@ -14,7 +14,7 @@
 
 <br/>
 
-[🚀 Quick Start](#-quick-start) • [🎛️ Core Capabilities](#️-core-capabilities) • [🌐 Model Fleet](#-unified-model-fleet) • [📋 Prompt Blueprints](#-curated-prompt-library) • [⧉ Model Comparison](#-side-by-side-benchmarking) • [🔒 Zero-Trace Security](#-zero-trace-security-architecture)
+[🚀 Quick Start](#-quick-start) • [🎛️ Core Capabilities](#️-core-capabilities) • [🚀 Engineering Innovations](#-engineering-architecture--core-innovations) • [📋 Prompt Blueprints](#-curated-prompt-library) • [⧉ Model Comparison](#-side-by-side-benchmarking) • [🔒 Zero-Trace Security](#-zero-trace-security-architecture)
 
 ---
 
@@ -70,19 +70,37 @@ Load end-to-end configured environments with a single click:
 
 ---
 
-## 🌐 Unified Model Fleet
+## 🚀 Engineering Architecture & Core Innovations
 
-| Model Specification | Provider / Gateway | Context | Optimal Workload | Throughput Profile |
-|---|---|---|---|---|
-| **Llama 3.1 8B Instant** | Groq LPU | `128,000 tok` | Ultra-low latency microservices, instant agents | `⚡ ~1,250 tok/s` |
-| **Llama 3.3 70B Versatile** | Groq LPU / OpenRouter | `128,000 tok` | Multihop logic, synthetic datasets, complex code | `⚡ ~280 tok/s` |
-| **OpenAI GPT-OSS 120B** | Groq / Meta Compute | `128,000 tok` | Deep reasoning chains, theorem proofs, audits | `⚡ ~320 tok/s` |
-| **Qwen 2.5 Coder 32B** | Groq LPU | `128,000 tok` | Full-stack refactoring, tests, vulnerabilities | `⚡ ~350 tok/s` |
-| **Mixtral 8x7B Sparse MoE** | Groq / Mistral | `32,768 tok` | High-concurrency docs, multilingual pipelines | `⚡ ~480 tok/s` |
-| **GPT-4o & GPT-4o Mini** | OpenAI Cloud | `128,000 tok` | Multimodal vision, complex tool orchestration | `~110 tok/s` |
-| **Claude 3.7 Sonnet / Haiku** | Anthropic | `200,000 tok` | Nuanced prose, high-level software architecture | `~95 tok/s` |
-| **Google Gemini 2.0 Flash** | Google AI Studio | `1,000,000 tok` | Massive repository context, video/audio reasoning | `⚡ ~240 tok/s` |
-| **Local Models (Ollama / vLLM)** | Localhost (`:11434`) | `Dynamic` | Air-gapped private inference, sensitive records | `Local Hardware` |
+NEXUS AI LAB is designed around five core engineering pillars to accelerate model evaluation from raw prompt prototyping to production deployment:
+
+### 1. ⚡ Unified Multi-Engine Inference Pipeline
+Rather than locking developers into a single proprietary ecosystem, NEXUS AI LAB normalizes divergent API protocols into an interoperable client-side dispatch layer:
+- **Groq LPU Hardware Acceleration**: Harnesses deterministic Tensor Streaming Processors (TSPs) to deliver sustained throughput of **~1,250 tokens/sec** on lightweight models and sub-100ms Time-to-First-Token (TTFT) on complex 70B+ architectures.
+- **Frontier Cloud Integration**: Direct, client-side bridges to OpenAI (GPT-4o, o3-mini), Anthropic (Claude 3.7 Sonnet), and Google Gemini (up to 2M context window).
+- **Zero-Config Local Deployment**: Native integration with private on-premise clusters running **Ollama** or **vLLM** (`http://localhost:11434/v1`), enabling air-gapped private inference with zero cloud dependencies.
+
+### 2. 📡 Real-Time SSE Chunking & Telemetry Engine
+The application embeds a custom, high-speed Server-Sent Events (SSE) stream reader built directly on the browser's native `ReadableStream` API:
+- **Instantaneous Delta Decoding**: Parses raw byte buffers on the fly without waiting for request completion or payload buffering.
+- **Microsecond Precision Telemetry**: Continuously recalculates response latency, active generation throughput, and token counts.
+- **Dynamic Stream Interruption**: Full `AbortController` cancellation loop that instantly terminates in-flight token streams at the hardware level.
+
+### 3. 🛠️ Autonomous Agent Workstation & MCP Registry
+Extends model capabilities beyond static text generation into active environment manipulation:
+- **Model Context Protocol (MCP)**: Native stdio and SSE socket bindings connecting models directly to filesystem readers, search engines, and enterprise database drivers.
+- **Runtime JSON Schema Validation**: Live tool parameter schema compiler allowing custom function registration directly from the UI.
+- **Sandboxed Execution Bridges**: Integrated Exa web search and Python 3 evaluation environments.
+
+### 4. 🛡️ Enterprise AI Safety & Injection Defense
+Production prompt engineering demands rigorous risk screening. NEXUS AI LAB incorporates a dual-classifier moderation pipeline:
+- **Meta Llama Guard 3 8B**: Evaluates incoming prompts and responses against MLCommons AI Safety standard taxonomies.
+- **Prompt Guard 2 86M**: Real-time scanner trained specifically to detect privilege escalation, prompt injection attempts, and jailbreak vectors before inference execution.
+
+### 5. 💾 Zero-Trace Client-Side Persistence
+Every prompt, session history, and provider API key is managed with uncompromising privacy:
+- **Strictly Local Memory**: Data never touches intermediate third-party proxy servers or analytics collectors.
+- **One-Click Session Snapshots**: Persist, serialize, and export multi-turn conversations and parameters directly into portable JSON bundles.
 
 ---
 
