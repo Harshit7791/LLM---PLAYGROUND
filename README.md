@@ -29,25 +29,6 @@
 
 ---
 
-## 🎨 Design System & Visual Palette
-
-The console is crafted around an intentional, low-fatigue dark aesthetic tailored for continuous development sessions:
-
-| Design Token | Hex Code | Visual Application |
-|---|---|---|
-| **Canvas Background** | `#080D1B` | Deep midnight canvas with subtle cosmic undertones |
-| **Sidebar Drawer** | `#0D1629` | Structural navigation pane and persistent history |
-| **Primary Panels** | `#131F35` | Workbench cards, parameter wells, and output viewports |
-| **Elevated Containers** | `#192740` | Active headers, interactive buttons, and code blocks |
-| **Structural Borders** | `#293B57` | High-contrast component framing |
-| **Primary Accent** | `#22D3EE` | Electric cyan buttons, active nav tabs, slider thumbs |
-| **Secondary Accent** | `#6366F1` | Indigo turn indicators and category badges |
-| **Creative Accent** | `#A78BFA` | Violet tags and specialized tool calls |
-| **Success Indicator** | `#34D399` | Ultra-fast throughput pills and active gateway status |
-| **Warning / Demo** | `#FBBF24` | Key-optional indicator and simulated mode badges |
-
----
-
 ## 🎛️ Core Capabilities
 
 ```
